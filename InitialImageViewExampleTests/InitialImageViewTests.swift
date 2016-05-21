@@ -9,7 +9,7 @@
 import XCTest
 @testable import InitialImageViewExample
 
-class InitialImageViewExampleTests: XCTestCase {
+class InitialImageViewTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,15 +21,22 @@ class InitialImageViewExampleTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testImageIsSet() {
+        
+        let imageView = InitialImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        XCTAssertNil(imageView.image)
+        imageView.setImageWithInitial("ZK", backgroundColor: UIColor.greenColor(), circle: true)
+        XCTAssertNotNil(imageView.image)
     }
     
-    func testPerformanceExample() {
+    func testDrawingPerformance() {
         // This is an example of a performance test case.
+        let imageView = InitialImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         self.measureBlock {
             // Put the code you want to measure the time of here.
+            for _ in 0...999 {
+                imageView.setImageWithInitial("ZK", backgroundColor: UIColor.greenColor(), circle: true)
+            }
         }
     }
     

@@ -12,8 +12,8 @@
 		1104D6B71CF042E600C97C25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1104D6B51CF042E600C97C25 /* Main.storyboard */; };
 		1104D6B91CF042E600C97C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1104D6B81CF042E600C97C25 /* Assets.xcassets */; };
 		1104D6BC1CF042E600C97C25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1104D6BA1CF042E600C97C25 /* LaunchScreen.storyboard */; };
-		1104D6C71CF042E600C97C25 /* InitialImageViewExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1104D6C61CF042E600C97C25 /* InitialImageViewExampleTests.swift */; };
-		1104D6D21CF042E600C97C25 /* InitialImageViewExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1104D6D11CF042E600C97C25 /* InitialImageViewExampleUITests.swift */; };
+		1104D6C71CF042E600C97C25 /* InitialImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1104D6C61CF042E600C97C25 /* InitialImageViewTests.swift */; };
+		1104D6E01CF0430B00C97C25 /* InitialImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1104D6DF1CF0430B00C97C25 /* InitialImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +42,10 @@
 		1104D6BB1CF042E600C97C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1104D6BD1CF042E600C97C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1104D6C21CF042E600C97C25 /* InitialImageViewExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialImageViewExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1104D6C61CF042E600C97C25 /* InitialImageViewExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialImageViewExampleTests.swift; sourceTree = "<group>"; };
+		1104D6C61CF042E600C97C25 /* InitialImageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialImageViewTests.swift; sourceTree = "<group>"; };
 		1104D6C81CF042E600C97C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1104D6CD1CF042E600C97C25 /* InitialImageViewExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialImageViewExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1104D6D11CF042E600C97C25 /* InitialImageViewExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialImageViewExampleUITests.swift; sourceTree = "<group>"; };
-		1104D6D31CF042E600C97C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1104D6DF1CF0430B00C97C25 /* InitialImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +78,6 @@
 			children = (
 				1104D6B01CF042E600C97C25 /* InitialImageViewExample */,
 				1104D6C51CF042E600C97C25 /* InitialImageViewExampleTests */,
-				1104D6D01CF042E600C97C25 /* InitialImageViewExampleUITests */,
 				1104D6AF1CF042E600C97C25 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +97,7 @@
 			children = (
 				1104D6B11CF042E600C97C25 /* AppDelegate.swift */,
 				1104D6B31CF042E600C97C25 /* ViewController.swift */,
+				1104D6DF1CF0430B00C97C25 /* InitialImageView.swift */,
 				1104D6B51CF042E600C97C25 /* Main.storyboard */,
 				1104D6B81CF042E600C97C25 /* Assets.xcassets */,
 				1104D6BA1CF042E600C97C25 /* LaunchScreen.storyboard */,
@@ -110,19 +109,10 @@
 		1104D6C51CF042E600C97C25 /* InitialImageViewExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				1104D6C61CF042E600C97C25 /* InitialImageViewExampleTests.swift */,
+				1104D6C61CF042E600C97C25 /* InitialImageViewTests.swift */,
 				1104D6C81CF042E600C97C25 /* Info.plist */,
 			);
 			path = InitialImageViewExampleTests;
-			sourceTree = "<group>";
-		};
-		1104D6D01CF042E600C97C25 /* InitialImageViewExampleUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1104D6D11CF042E600C97C25 /* InitialImageViewExampleUITests.swift */,
-				1104D6D31CF042E600C97C25 /* Info.plist */,
-			);
-			path = InitialImageViewExampleUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +248,7 @@
 			files = (
 				1104D6B41CF042E600C97C25 /* ViewController.swift in Sources */,
 				1104D6B21CF042E600C97C25 /* AppDelegate.swift in Sources */,
+				1104D6E01CF0430B00C97C25 /* InitialImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1104D6C71CF042E600C97C25 /* InitialImageViewExampleTests.swift in Sources */,
+				1104D6C71CF042E600C97C25 /* InitialImageViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +264,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1104D6D21CF042E600C97C25 /* InitialImageViewExampleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +393,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InitialImageViewExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Zac.InitialImageView.InitialImageViewExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zac.InitialImageView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -414,7 +404,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InitialImageViewExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Zac.InitialImageView.InitialImageViewExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Zac.InitialImageView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
