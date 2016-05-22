@@ -22,11 +22,29 @@ class InitialImageViewTests: XCTestCase {
     }
     
     func testImageIsSet() {
-        
         let imageView = InitialImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         XCTAssertNil(imageView.image)
         imageView.setImageWithInitial("ZK", backgroundColor: UIColor.greenColor(), circle: true)
         XCTAssertNotNil(imageView.image)
+    }
+    
+    func testInitalIsReturnFromFullName() {
+        let imageView = InitialImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        let initial = imageView.getInitialFromName("Zac Kwan")
+        XCTAssertEqual("ZK", initial)
+    }
+    
+    func testInitalIsReturnFromSingleName() {
+        let imageView = InitialImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        let initial = imageView.getInitialFromName("Zac")
+        XCTAssertEqual("Z", initial)
+    }
+    
+    func testCreateFontAttribute() {
+        let imageView = InitialImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        let fontAttribute = imageView.createFontAttribute()
+        XCTAssertNotNil(fontAttribute[NSForegroundColorAttributeName])
+        XCTAssertNotNil(fontAttribute[NSFontAttributeName])
     }
     
     func testDrawingPerformance() {

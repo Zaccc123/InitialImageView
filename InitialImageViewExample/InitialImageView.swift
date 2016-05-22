@@ -13,30 +13,38 @@ class InitialImageView : UIImageView {
     var fontResizeValue:CGFloat = 0.5
     var font = UIFont.systemFontOfSize(20)
     
-    func setImageWithInitial(initial: String, backgroundColor: UIColor, circle: Bool) {
-        self.setImageWithInitial(initial, fontAttribute: createFontAttributeWith(nil), backgroundColor: backgroundColor, circle: circle)
+    func setImageWithName(name: String, backgroundColor: UIColor, circle: Bool) {
+        self.setImageWithInitial(getInitialFromName(name), backgroundColor: backgroundColor, circle: circle)
     }
-
-    func setImageWithInitial(initial: String, fontAttribute: [String : AnyObject]?, backgroundColor: UIColor, circle: Bool) {
-        let attributedInitial = NSAttributedString(string: initial, attributes: fontAttribute)
+    
+    func setImageWithInitial(initial: String, backgroundColor: UIColor, circle: Bool) {
+        let attributedInitial = NSAttributedString(string: initial, attributes: createFontAttribute())
         
         self.image = createImageFromInitial(attributedInitial, backgroundColor: backgroundColor, circle: true)
     }
     
     // MARK: - Helpers
-    private func createFontAttributeWith(fontName: String?) -> [String: AnyObject] {
+    func getInitialFromName(name: String) -> String {
+        
+        let fullName = name.componentsSeparatedByString(" ")
+        var initial = ""
+        
+        if let firstChar = fullName[safe: 0]?.characters.first {
+            initial.append(firstChar)
+        }
+        if let secondChar = fullName[safe: 1]?.characters.first {
+            initial.append(secondChar)
+        }
+        
+        return initial
+        
+    }
+    
+    func createFontAttribute() -> [String: AnyObject] {
         
         let fontSize = CGRectGetWidth(self.bounds) * fontResizeValue;
-        
-        if let fontName = fontName {
-            let fontAttribute:[String:AnyObject] = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: fontName, size: fontSize)!]
-            return fontAttribute
-        }
-        else {
-            let fontAttribute:[String:AnyObject] = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: font.fontWithSize(fontSize)]
-            return fontAttribute
-        }
-        
+        let fontAttribute:[String:AnyObject] = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: font.fontWithSize(fontSize)]
+        return fontAttribute
     }
     
     private func createImageFromInitial(attributedInitial: NSAttributedString, backgroundColor: UIColor, circle: Bool) -> UIImage {
@@ -67,5 +75,10 @@ class InitialImageView : UIImageView {
         return image;
 
     }
+}
 
+extension Array {
+    subscript (safe index: Int) -> Element? {
+        return indices ~= index ? self[index] : nil
+    }
 }
