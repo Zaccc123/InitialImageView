@@ -21,10 +21,31 @@ class InitialImageViewTests: XCTestCase {
         super.tearDown()
     }
     
-    func testImageIsSet() {
+    func testSetImageWithInitialNotNil() {
         let imageView = InitialImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         XCTAssertNil(imageView.image)
-        imageView.setImageWithInitial("ZK", backgroundColor: UIColor.greenColor(), circle: true)
+        imageView.setImageWithInitial("ZK", backgroundColor: UIColor.greenColor())
+        XCTAssertNotNil(imageView.image)
+    }
+    
+    func testSetImageWithNameNotNil() {
+        let imageView = InitialImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        XCTAssertNil(imageView.image)
+        imageView.setImageWithName("Zac", backgroundColor: UIColor.greenColor())
+        XCTAssertNotNil(imageView.image)
+    }
+    
+    func testSetImageWithFirstAndLastName() {
+        let imageView = InitialImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        XCTAssertNil(imageView.image)
+        imageView.setImageWithFirstName("Zac", lastName: "Kwan", backgroundColor: UIColor.blueColor())
+        XCTAssertNotNil(imageView.image)
+    }
+
+    func testSetImageWithInitial() {
+        let imageView = InitialImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        XCTAssertNil(imageView.image)
+        imageView.setImageWithInitial("ZK", backgroundColor: UIColor.greenColor())
         XCTAssertNotNil(imageView.image)
     }
     
@@ -53,7 +74,7 @@ class InitialImageViewTests: XCTestCase {
         self.measureBlock {
             // Put the code you want to measure the time of here.
             for _ in 0...999 {
-                imageView.setImageWithInitial("ZK", backgroundColor: UIColor.greenColor(), circle: true)
+                imageView.setImageWithInitial("ZK", backgroundColor: UIColor.greenColor())
             }
         }
     }

@@ -31,24 +31,28 @@
                                     <constraint firstAttribute="width" constant="100" id="XVP-eF-FEh"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMk-Cx-a39">
-                                <rect key="frame" x="442" y="397" width="130" height="21"/>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mmR-0N-Tn9" customClass="InitialImageView" customModule="InitialImageViewExample" customModuleProvider="target">
+                                <rect key="frame" x="250" y="303" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="by2-Ko-JrJ"/>
+                                    <constraint firstAttribute="height" constant="100" id="lkY-O8-ixD"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ReR-G0-37v" firstAttribute="top" secondItem="Dvp-d7-0pB" secondAttribute="bottom" constant="34" id="JJT-OK-4c4"/>
                             <constraint firstItem="Dvp-d7-0pB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P9k-mP-HGU"/>
                             <constraint firstItem="Dvp-d7-0pB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Yak-Yx-jvH"/>
+                            <constraint firstItem="mmR-0N-Tn9" firstAttribute="top" secondItem="ReR-G0-37v" secondAttribute="bottom" constant="29" id="g0A-0Q-vUd"/>
+                            <constraint firstItem="mmR-0N-Tn9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="onO-4D-WXc"/>
                             <constraint firstItem="ReR-G0-37v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qHp-Sy-wHw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="Dvp-d7-0pB" id="h8N-ga-jHE"/>
                         <outlet property="secondImageView" destination="ReR-G0-37v" id="d5e-7N-04E"/>
+                        <outlet property="thirdImageView" destination="mmR-0N-Tn9" id="LEy-In-o9I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

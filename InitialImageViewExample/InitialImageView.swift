@@ -12,15 +12,20 @@ class InitialImageView : UIImageView {
     
     var fontResizeValue:CGFloat = 0.5
     var font = UIFont.systemFontOfSize(20)
+    var isCircle = true
     
-    func setImageWithName(name: String, backgroundColor: UIColor, circle: Bool) {
-        self.setImageWithInitial(getInitialFromName(name), backgroundColor: backgroundColor, circle: circle)
+    func setImageWithFirstName(firstName: String, lastName: String, backgroundColor: UIColor) {
+        self.setImageWithInitial(getInitialFromName(firstName+lastName), backgroundColor: backgroundColor)
     }
     
-    func setImageWithInitial(initial: String, backgroundColor: UIColor, circle: Bool) {
+    func setImageWithName(name: String, backgroundColor: UIColor) {
+        self.setImageWithInitial(getInitialFromName(name), backgroundColor: backgroundColor)
+    }
+    
+    func setImageWithInitial(initial: String, backgroundColor: UIColor) {
         let attributedInitial = NSAttributedString(string: initial, attributes: createFontAttribute())
         
-        self.image = createImageFromInitial(attributedInitial, backgroundColor: backgroundColor, circle: true)
+        self.image = createImageFromInitial(attributedInitial, backgroundColor: backgroundColor)
     }
     
     // MARK: - Helpers
@@ -47,7 +52,7 @@ class InitialImageView : UIImageView {
         return fontAttribute
     }
     
-    private func createImageFromInitial(attributedInitial: NSAttributedString, backgroundColor: UIColor, circle: Bool) -> UIImage {
+    private func createImageFromInitial(attributedInitial: NSAttributedString, backgroundColor: UIColor) -> UIImage {
         
         let scale = UIScreen.mainScreen().scale
         let bounds = self.bounds
@@ -55,7 +60,7 @@ class InitialImageView : UIImageView {
         UIGraphicsBeginImageContextWithOptions(bounds.size, false, scale)
         let context = UIGraphicsGetCurrentContext()
         
-        if (circle) {
+        if (isCircle) {
             let path = CGPathCreateWithEllipseInRect(self.bounds, nil);
             CGContextAddPath(context, path)
             CGContextClip(context)
