@@ -10,19 +10,19 @@ import UIKit
 
 public class InitialImageView : UIImageView {
     
-    var fontResizeValue:CGFloat = 0.5
-    var font = UIFont.systemFontOfSize(20)  //font size does not matter, it will be calculated by the base on fontResizeValue and self.bounds
-    var isCircle = true
+    public var fontResizeValue:CGFloat = 0.5
+    public var font = UIFont.systemFontOfSize(20)  //font size does not matter, it will be calculated by the base on fontResizeValue and self.bounds
+    public var isCircle = true
 
-    func setImageWithFirstName(firstName: String, lastName: String, backgroundColor: UIColor = UIColor.darkGrayColor(), randomColor: Bool = false) {
+    public func setImageWithFirstName(firstName: String, lastName: String, backgroundColor: UIColor = UIColor.darkGrayColor(), randomColor: Bool = false) {
         self.setImageWithInitial(getInitialFromName("\(firstName) \(lastName)"), backgroundColor: backgroundColor, randomColor: randomColor)
     }
     
-    func setImageWithName(name: String, backgroundColor: UIColor = UIColor.darkGrayColor(), randomColor: Bool = false) {
+    public func setImageWithName(name: String, backgroundColor: UIColor = UIColor.darkGrayColor(), randomColor: Bool = false) {
         self.setImageWithInitial(getInitialFromName(name), backgroundColor: backgroundColor, randomColor: randomColor)
     }
     
-    func setImageWithInitial(initial: String, backgroundColor: UIColor = UIColor.darkGrayColor(), randomColor: Bool = false) {
+    public func setImageWithInitial(initial: String, backgroundColor: UIColor = UIColor.darkGrayColor(), randomColor: Bool = false) {
         let attributedInitial = NSAttributedString(string: initial, attributes: createFontAttribute())
 
         if randomColor {
