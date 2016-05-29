@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InitialImageView : UIImageView {
+public class InitialImageView : UIImageView {
     
     var fontResizeValue:CGFloat = 0.5
     var font = UIFont.systemFontOfSize(20)  //font size does not matter, it will be calculated by the base on fontResizeValue and self.bounds
