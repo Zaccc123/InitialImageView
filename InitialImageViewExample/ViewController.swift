@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         }
         initialWithFontImageView.setImageWithInitial("YW", backgroundColor: UIColor.greenColor())
         
-        nameImageView.setImageWithName("Johnny Tan", backgroundColor: UIColor.darkGrayColor())
+        nameImageView.setImageWithName("Johnny Tan", randomColor: true)
 
         firstNameLastNameImageView.setImageWithFirstName("Steve", lastName: "Bob", backgroundColor: UIColor.brownColor())
 

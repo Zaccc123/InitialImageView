@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pYk-v4-Fwr">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Example-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InitialImageViewExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,37 +19,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dvp-d7-0pB" customClass="InitialImageView" customModule="InitialImageViewExample" customModuleProvider="target">
-                                <rect key="frame" x="250" y="40" width="100" height="100"/>
+                                <rect key="frame" x="250" y="84" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="4Op-h3-0c5"/>
                                     <constraint firstAttribute="width" constant="100" id="hle-UP-I7N"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ReR-G0-37v" customClass="InitialImageView" customModule="InitialImageViewExample" customModuleProvider="target">
-                                <rect key="frame" x="250" y="174" width="100" height="100"/>
+                                <rect key="frame" x="250" y="218" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="MPo-af-ft7"/>
                                     <constraint firstAttribute="width" constant="100" id="XVP-eF-FEh"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mmR-0N-Tn9" customClass="InitialImageView" customModule="InitialImageViewExample" customModuleProvider="target">
-                                <rect key="frame" x="250" y="303" width="100" height="100"/>
+                                <rect key="frame" x="250" y="347" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="by2-Ko-JrJ"/>
                                     <constraint firstAttribute="height" constant="100" id="lkY-O8-ixD"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BCx-UZ-qNk" customClass="InitialImageView" customModule="InitialImageViewExample" customModuleProvider="target">
-                                <rect key="frame" x="250" y="429" width="100" height="100"/>
+                                <rect key="frame" x="250" y="473" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="62y-07-LhQ"/>
                                     <constraint firstAttribute="height" constant="100" id="tcU-QG-EUx"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K09-FM-qoX">
+                                <rect key="frame" x="505" y="285" width="75" height="30"/>
+                                <state key="normal" title="Table View"/>
+                                <connections>
+                                    <segue destination="25C-fh-snX" kind="show" id="NAH-a3-D7S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="K09-FM-qoX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5rj-kA-hb6"/>
                             <constraint firstItem="ReR-G0-37v" firstAttribute="top" secondItem="Dvp-d7-0pB" secondAttribute="bottom" constant="34" id="JJT-OK-4c4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K09-FM-qoX" secondAttribute="trailing" id="Lc5-BV-BSi"/>
                             <constraint firstItem="Dvp-d7-0pB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P9k-mP-HGU"/>
                             <constraint firstItem="Dvp-d7-0pB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Yak-Yx-jvH"/>
                             <constraint firstItem="mmR-0N-Tn9" firstAttribute="top" secondItem="ReR-G0-37v" secondAttribute="bottom" constant="29" id="g0A-0Q-vUd"/>
@@ -58,6 +68,7 @@
                             <constraint firstItem="BCx-UZ-qNk" firstAttribute="top" secondItem="mmR-0N-Tn9" secondAttribute="bottom" constant="26" id="rDc-uE-Bwt"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Example" id="5JQ-V2-6Iz"/>
                     <connections>
                         <outlet property="firstNameLastNameImageView" destination="BCx-UZ-qNk" id="G2J-T2-1eJ"/>
                         <outlet property="initialImageView" destination="Dvp-d7-0pB" id="Fcc-Wr-SLP"/>
@@ -66,6 +77,68 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="251"/>
+        </scene>
+        <!--Example Table View Controller-->
+        <scene sceneID="vsW-QC-l5M">
+            <objects>
+                <tableViewController id="25C-fh-snX" customClass="ExampleTableViewController" customModule="InitialImageViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="daX-aK-0wV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExampleTableViewCell" id="wQn-T6-zJ0" customClass="ExampleTableViewCell" customModule="InitialImageViewExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wQn-T6-zJ0" id="OFd-uz-UmU">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ITC-se-i5f" customClass="InitialImageView" customModule="InitialImageViewExample" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="10" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Wge-eO-A1D"/>
+                                                <constraint firstAttribute="width" constant="40" id="kBS-9S-h15"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ITC-se-i5f" firstAttribute="centerY" secondItem="OFd-uz-UmU" secondAttribute="centerY" id="85k-AG-fQV"/>
+                                        <constraint firstItem="ITC-se-i5f" firstAttribute="leading" secondItem="OFd-uz-UmU" secondAttribute="leadingMargin" constant="12" id="ccl-oY-IVa"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="initialImageView" destination="ITC-se-i5f" id="0dM-IS-EyH"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="25C-fh-snX" id="DzQ-AP-bxV"/>
+                            <outlet property="delegate" destination="25C-fh-snX" id="5jn-Te-ZPH"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F0L-aG-bVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1801" y="251"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UhT-Ks-bHH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pYk-v4-Fwr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jVN-o2-ue4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GyP-yu-Dxc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8s4-Hj-JxM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="251"/>
         </scene>
