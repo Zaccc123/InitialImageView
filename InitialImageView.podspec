@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "InitialImageView"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "A subclass of UIImageView that empower user to set initial or name as a placeholder"
   s.description  = "InitialImageView is a subclass of UIImageView that empower user to set initial or name as a placeholder image like what you see in a iOs Contact."
   s.homepage     = "https://github.com/Zaccc123/InitialImageView"
