@@ -103,14 +103,38 @@
                                                 <constraint firstAttribute="width" constant="40" id="kBS-9S-h15"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wj-3R-A7F">
+                                            <rect key="frame" x="76" y="8" width="104.5" height="23"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzK-aJ-iLI">
+                                            <rect key="frame" x="76" y="31" width="107.5" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="1Wj-3R-A7F" firstAttribute="leading" secondItem="ITC-se-i5f" secondAttribute="trailing" constant="16" id="2s1-ET-Vxa"/>
                                         <constraint firstItem="ITC-se-i5f" firstAttribute="centerY" secondItem="OFd-uz-UmU" secondAttribute="centerY" id="85k-AG-fQV"/>
+                                        <constraint firstItem="pzK-aJ-iLI" firstAttribute="leading" secondItem="1Wj-3R-A7F" secondAttribute="trailing" constant="-131" id="Agp-MV-Lar"/>
+                                        <constraint firstItem="pzK-aJ-iLI" firstAttribute="leading" secondItem="1Wj-3R-A7F" secondAttribute="leading" id="B1Z-XV-Njj"/>
+                                        <constraint firstAttribute="topMargin" secondItem="1Wj-3R-A7F" secondAttribute="top" id="Pma-lV-TRL"/>
+                                        <constraint firstItem="pzK-aJ-iLI" firstAttribute="top" secondItem="1Wj-3R-A7F" secondAttribute="bottom" id="WpK-1c-sMa"/>
                                         <constraint firstItem="ITC-se-i5f" firstAttribute="leading" secondItem="OFd-uz-UmU" secondAttribute="leadingMargin" constant="12" id="ccl-oY-IVa"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Agp-MV-Lar"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="fullnameLabel" destination="pzK-aJ-iLI" id="QhA-8J-Yhs"/>
                                     <outlet property="initialImageView" destination="ITC-se-i5f" id="0dM-IS-EyH"/>
+                                    <outlet property="usernameLabel" destination="1Wj-3R-A7F" id="j6D-26-rIk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

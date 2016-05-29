@@ -10,6 +10,19 @@ import UIKit
 
 class ExampleTableViewController: UITableViewController {
 
+    let userArray = [User(name:"Zac Kwan", username: "Zaccc"),
+                            User(name:"James Tan", username: "James"),
+                            User(name:"Steve King", username: "King252"),
+                            User(name:"John", username: "Jonnnnnny"),
+                            User(name:"Logan Wolve", username: "Wolve"),
+                            User(name:"Spade Chia", username: "Kspate"),
+                            User(name:"Christian Jerry", username: "Jerryison"),
+                            User(name:"Joshson Berry", username: "John_292"),
+                            User(name:"Mark Angel", username: "Angel"),
+                            User(name:"Alex", username: "Alexer"),
+                            User(name:"Ivan Huang", username: "Ivan")
+                            ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -21,12 +34,12 @@ class ExampleTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return userArray.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ExampleTableViewCell", forIndexPath: indexPath) as! ExampleTableViewCell
-        cell.configure("James Tan")
+        cell.configure(userArray[indexPath.row])
 
         return cell
     }
@@ -35,4 +48,15 @@ class ExampleTableViewController: UITableViewController {
         tableView .deselectRowAtIndexPath(indexPath, animated: true)
     }
 
+}
+
+struct User {
+
+    let name: String
+    let username: String
+
+    init(name: String, username: String) {
+        self.name = name
+        self.username = username
+    }
 }
