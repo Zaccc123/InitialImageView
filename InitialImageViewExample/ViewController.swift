@@ -10,20 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var imageView: InitialImageView!
-    @IBOutlet weak var secondImageView: InitialImageView!
-    @IBOutlet weak var thirdImageView: InitialImageView!
+    @IBOutlet weak var initialImageView: InitialImageView!
+    @IBOutlet weak var initialWithFontImageView: InitialImageView!
+    @IBOutlet weak var nameImageView: InitialImageView!
+    @IBOutlet weak var firstNameLastNameImageView: InitialImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        imageView.setImageWithInitial("ZK", backgroundColor: UIColor.blueColor())
+
+        initialImageView.setImageWithInitial("ZK", backgroundColor: UIColor.blueColor())
         
-        let font = UIFont(name: "Courier", size: 200)
-        secondImageView.font = font!
-        secondImageView.setImageWithInitial("YW", backgroundColor: UIColor.greenColor())
+        if let font = UIFont(name: "Courier", size: 200) {
+            initialWithFontImageView.font = font
+        }
+        initialWithFontImageView.setImageWithInitial("YW", backgroundColor: UIColor.greenColor())
         
-        thirdImageView.setImageWithName("Johnny Tan", backgroundColor: UIColor.darkGrayColor())
+        nameImageView.setImageWithName("Johnny Tan", backgroundColor: UIColor.darkGrayColor())
+
+        firstNameLastNameImageView.setImageWithFirstName("Steve", lastName: "Bob", backgroundColor: UIColor.brownColor())
 
     }
 

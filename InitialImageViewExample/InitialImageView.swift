@@ -15,7 +15,7 @@ class InitialImageView : UIImageView {
     var isCircle = true
     
     func setImageWithFirstName(firstName: String, lastName: String, backgroundColor: UIColor) {
-        self.setImageWithInitial(getInitialFromName(firstName+lastName), backgroundColor: backgroundColor)
+        self.setImageWithInitial(getInitialFromName("\(firstName) \(lastName)"), backgroundColor: backgroundColor)
     }
     
     func setImageWithName(name: String, backgroundColor: UIColor) {
