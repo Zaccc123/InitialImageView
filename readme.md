@@ -3,9 +3,7 @@
 
 InitialImageView is a subclass of UIImageView that empower user to set initial or name as a placeholder image like what you see in a iOs Contact
 
-![Screenshot 1](http://imgur.com/4DIKTug.png)
-
-![Screenshot 2](http://imgur.com/iWEVqiq.png)
+![Screenshots](http://i.imgur.com/jVVa8Bm.png)
 
 ## Installation
 
