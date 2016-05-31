@@ -1,5 +1,5 @@
-# InitialImageView
-[![Build Status](https://www.bitrise.io/app/95edfdbff10fffa5.svg?token=oU7Up6bkcm2FEzk6kb_DVA&branch=master)](https://www.bitrise.io/app/95edfdbff10fffa5)
+# InitialImageView 
+[![Build Status](https://www.bitrise.io/app/95edfdbff10fffa5.svg?token=oU7Up6bkcm2FEzk6kb_DVA&branch=master)](https://www.bitrise.io/app/95edfdbff10fffa5)  ![Pods](https://img.shields.io/cocoapods/v/InitialImageView.svg?style=flat)  ![Pods](https://img.shields.io/cocoapods/l/InitialImageView.svg?style=flat)
 
 InitialImageView is a subclass of UIImageView that empower user to set initial or name as a placeholder image like what you see in a iOs Contact
 
