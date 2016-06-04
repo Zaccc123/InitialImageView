@@ -1,4 +1,4 @@
-# InitialImageView 
+# InitialImageView
 [![Build Status](https://www.bitrise.io/app/95edfdbff10fffa5.svg?token=oU7Up6bkcm2FEzk6kb_DVA&branch=master)](https://www.bitrise.io/app/95edfdbff10fffa5)  ![Pods](https://img.shields.io/cocoapods/v/InitialImageView.svg?style=flat)  ![Pods](https://img.shields.io/cocoapods/l/InitialImageView.svg?style=flat)
 
 InitialImageView is a subclass of UIImageView that empower user to set initial or name as a placeholder image like what you see in a iOs Contact
@@ -17,7 +17,7 @@ Just drag and drop InitialImageView.swift to your project.
 
 ## Example
 
-1) Storyboard with IBOutlet in ViewController
+#### Storyboard with IBOutlet in ViewController
 
     @IBOutlet weak var initialImageView: InitialImageView!
 
@@ -26,13 +26,18 @@ Just drag and drop InitialImageView.swift to your project.
       initialWithFontImageView.setImageWithInitial("YW", backgroundColor: UIColor.greenColor())
     }
 
-2) From code
+#### Doing it in code
 
     override func viewDidLoad() {
       super.viewDidLoad()
       let initialImageView = InitialImageView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
       initialWithFontImageView.setImageWithInitial("YW", backgroundColor: UIColor.greenColor())
     }
+
+#### Placeholder while downloading with AlamofireImage or any other url completion
+
+    profileImageView.setImageWithFirstName(user.firstName, lastName: user.lastName)
+    profileImageView.af_setImageWithURL(user.profileUrl)
 
 ## Usage
 
